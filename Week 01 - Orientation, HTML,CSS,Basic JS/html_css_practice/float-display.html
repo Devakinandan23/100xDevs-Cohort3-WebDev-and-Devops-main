@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display vs Float</title>
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .boxes{
+            width: 100px;
+            height: 100px;
+            color: darkblue;
+            background-color: #9b59b6;
+            border: 2px solid;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            color: rgb(252, 211, 211);
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+        }
+        /* Display Examples */
+        .display-block {
+            background-color: #3498db;
+            display: block; /* Full width, new line */
+        }
+        .display-inline {
+            background-color: #e74c3c;
+            display: inline; /* Same line, content width */
+        }
+        .display-inline-block {
+            background-color: #2ecc71;
+            display: inline-block; /* Same line, but with width/height */
+        }
+        /* Float Example */
+        .float-left {
+            background-color: #9b59b6;
+            float: left; /* Moves left, text wraps */
+        }
+        .text {
+            font-size: 16px;
+        }
+        /* Clearfix for float */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display vs Float Demo</h1>
+    
+    <h2>Display Examples</h2>
+    <div class="box display-block">Block</div>
+    <div class="box display-inline">Inline</div>
+    <div class="box display-inline-block">Inline-Block</div>
+
+    <h2>Float Example</h2>
+    <div class="clearfix">
+        <div class="box float-left">Float Left</div>
+        <p class="text">This text wraps around the floated element. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div >
+        <div class="boxes" >Amaresh boxer</div>
+        <div class="boxes">Amaresh Singer</div>
+    </div>
+</body>
+</html>

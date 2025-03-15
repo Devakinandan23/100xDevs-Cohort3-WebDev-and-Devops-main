@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Demo with Buttons</title>
+    <style>
+        body {
+            height: 150vh; /* Scrollable page */
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            position: relative; /* Parent for absolute positioning */
+            border: 2px dashed black;
+            padding: 20px;
+            height: 400px;
+            background-color: #f0f0f0;
+            margin-bottom: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+            transition: all 0.3s ease; /* Smooth transitions */
+        }
+        #static {
+            background-color: #3498db;
+            position: static;
+        }
+        #relative {
+            background-color: #e74c3c;
+            position: relative;
+        }
+        #absolute {
+            background-color: #2ecc71;
+            position: absolute;
+        }
+        #fixed {
+            background-color: #9b59b6;
+            position: fixed;
+        }
+        #sticky {
+            background-color: #f1c40f;
+            position: sticky;
+            top: 20px;
+        }
+        .buttons {
+            margin: 10px 0;
+        }
+        button {
+            padding: 8px 12px;
+            margin: 0 5px;
+            cursor: pointer;
+            background-color: #ddd;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Position Demo with Interactive Buttons</h1>
+    <div class="container">
+        <div class="box" id="static">Static</div>
+        <div class="box" id="relative">Relative</div>
+        <div class="box" id="absolute">Absolute</div>
+        <div class="box" id="fixed">Fixed</div>
+        <div class="box" id="sticky">Sticky</div>
+    </div>
+
+    <div class="buttons">
+        <h3>Toggle Properties</h3>
+        <button onclick="toggleRelative()">Toggle Relative (top: 50px, left: 50px)</button>
+        <button onclick="toggleAbsolute()">Toggle Absolute (top: 100px, left: 100px)</button>
+        <button onclick="toggleFixed()">Toggle Fixed (top: 10px, right: 10px)</button>
+        <button onclick="resetAll()">Reset All</button>
+    </div>
+
+    <p>Scroll to see <code>fixed</code> and <code>sticky</code> in action!</p>
+
+    <script>
+        const relativeBox = document.getElementById('relative');
+        const absoluteBox = document.getElementById('absolute');
+        const fixedBox = document.getElementById('fixed');
+
+        let relativeToggled = false;
+        let absoluteToggled = false;
+        let fixedToggled = false;
+
+        function toggleRelative() {
+            relativeToggled = !relativeToggled;
+            if (relativeToggled) {
+                relativeBox.style.top = '50px';
+                relativeBox.style.left = '50px';
+            } else {
+                relativeBox.style.top = '';
+                relativeBox.style.left = '';
+            }
+        }
+
+        function toggleAbsolute() {
+            absoluteToggled = !absoluteToggled;
+            if (absoluteToggled) {
+                absoluteBox.style.top = '100px';
+                absoluteBox.style.left = '100px';
+            } else {
+                absoluteBox.style.top = '';
+                absoluteBox.style.left = '';
+            }
+        }
+
+        function toggleFixed() {
+            fixedToggled = !fixedToggled;
+            if (fixedToggled) {
+                fixedBox.style.top = '10px';
+                fixedBox.style.right = '10px';
+            } else {
+                fixedBox.style.top = '';
+                fixedBox.style.right = '';
+            }
+        }
+
+        function resetAll() {
+            relativeToggled = false;
+            absoluteToggled = false;
+            fixedToggled = false;
+            relativeBox.style.top = '';
+            relativeBox.style.left = '';
+            absoluteBox.style.top = '';
+            absoluteBox.style.left = '';
+            fixedBox.style.top = '';
+            fixedBox.style.right = '';
+        }
+    </script>
+</body>
+</html>

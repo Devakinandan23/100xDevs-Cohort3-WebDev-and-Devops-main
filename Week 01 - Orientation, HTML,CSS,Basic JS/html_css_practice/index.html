@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            height: 2000px; /* For scrolling demonstration */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative; /* Serves as reference for absolute positioning */
+            width: 600px;
+            height: 400px;
+            border: 2px solid #000;
+            margin: 50px auto;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .static {
+            position: static; /* Default positioning */
+            background-color: #3498db;
+        }
+
+        .relative {
+            position: relative; /* Moves relative to its normal position */
+            top: 20px;
+            left: 20px;
+            background-color: #2ecc71;
+        }
+
+        .absolute {
+            position: absolute; /* Relative to nearest positioned ancestor */
+            top: 50px;
+            right: 50px;
+            background-color: #e74c3c;
+        }
+
+        .fixed {
+            position: fixed; /* Relative to viewport, stays on scroll */
+            top: 20px;
+            right: 20px;
+            background-color: #9b59b6;
+        }
+
+        .sticky {
+            position: sticky; /* Sticks when scrolling past */
+            top: 10px;
+            background-color: #f1c40f;
+        }
+
+        .description {
+            margin-top: 450px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed box">Fixed</div>
+    <div class="container">
+        <div class="static box">Static</div>
+        <div class="relative box">Relative</div>
+        <div class="absolute box">Absolute</div>
+        <div class="sticky box">Sticky</div>
+    </div>
+    <div class="description">
+        <h2>CSS Position Types:</h2>
+        <ul>
+            <li><strong>Static</strong>: Default position, follows normal flow (blue)</li>
+            <li><strong>Relative</strong>: Offset from its normal position (green)</li>
+            <li><strong>Absolute</strong>: Positioned relative to nearest positioned ancestor (red)</li>
+            <li><strong>Fixed</strong>: Stays fixed relative to viewport (purple)</li>
+            <li><strong>Sticky</strong>: Sticks to position when scrolling past (yellow)</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "100xdevs-cohort3-webdev-and-devops-main",
+  "version": "1.0.0",
+  "description": "> #### **_[100xDevs Cohort 3.0](https://app.100xdevs.com/) 🚀 by [Harkirat Singh](https://x.com/kirat_tw). This repository contains `live class/lecture codes, lecture assignments, assignment solutions, links to notes/slides link, some good relevant articles/blogs link` for each lecture, and a list of all topics covered in the class, organized lecture-wise to help you._**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devakinandan23/100xDevs-Cohort3-WebDev-and-Devops-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Devakinandan23/100xDevs-Cohort3-WebDev-and-Devops-main/issues"
+  },
+  "homepage": "https://github.com/Devakinandan23/100xDevs-Cohort3-WebDev-and-Devops-main#readme"
+}

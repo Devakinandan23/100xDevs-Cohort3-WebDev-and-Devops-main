@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Full_TODO</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js"></script>
+        <script>
+            async function addTodoDOM(){
+                let task = document.getElementById("addtodo").value;
+                const response = await axios.post("http://localhost:3000/add",
+                    {
+                        task: task
+                    }
+                )
+                // document.getElementById("addTasks").innerHTML = response.data.task;
+            }
+            // async function addTasks() {
+            //     // document.querySelector("addTasks").innerHTML = 
+            // }
+        </script>
+    </head>
+    <body>
+        <input type="text" placeholder="add your task" id="addtodo">
+        <button onclick="addTodoDOM()">Add TODO</button>
+        <div id="addTasks"></div>
+        
+    </body>
+</html>

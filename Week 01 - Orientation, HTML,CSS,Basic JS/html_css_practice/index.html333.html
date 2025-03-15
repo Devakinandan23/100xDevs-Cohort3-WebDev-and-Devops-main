@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Demo</title>
+    <style>
+        body {
+            height: 150vh; /* Make the page scrollable */
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+        }
+        .container {
+            position: relative; /* Parent for absolute positioning */
+            border: 2px dashed black;
+            padding: 20px;
+            height: 300px;
+            background-color: #f0f0f0;
+        }
+        #static {
+            background-color: #3498db;
+            position: static; /* Default, stays in normal flow */
+        }
+        #relative {
+            background-color: #e74c3c;
+            position: relative;
+            top: 20px; /* Moves 20px down from its normal spot */
+            left: 30px; /* Moves 30px right from its normal spot */
+        }
+        #absolute {
+            background-color: #2ecc71;
+            position: absolute;
+            top: 50px; /* 50px from top of .container (nearest positioned ancestor) */
+            left: 50px; /* 50px from left of .container */
+        }
+        #fixed {
+            background-color: #9b59b6;
+            position: fixed;
+            top: 10px; /* Stays 10px from top of viewport */
+            right: 10px; /* Stays 10px from right of viewport */
+        }
+        #sticky {
+            background-color: #f1c40f;
+            position: sticky;
+            top: 20px; /* Sticks 20px from top when scrolling */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Position Types Demo</h1>
+    <div class="container">
+        <div class="box" id="static">Static</div>
+        <div class="box" id="relative">Relative</div>
+        <div class="box" id="absolute">Absolute</div>
+        <div class="box" id="fixed">Fixed</div>
+        <div class="box" id="sticky">Sticky</div>
+    </div>
+    <p>Scroll down to see the effects of fixed and sticky!</p>
+</body>
+</html>

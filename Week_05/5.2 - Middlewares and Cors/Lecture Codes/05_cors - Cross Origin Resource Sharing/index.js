@@ -42,7 +42,7 @@ app.post("/sum", function (req, res) {
 
     // send the sum of a and b as a response in json format
     res.json({
-        ans: a + b,
+        ans: a + b
     });
 });
 

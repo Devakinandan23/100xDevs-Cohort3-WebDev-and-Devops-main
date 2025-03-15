@@ -1,0 +1,68 @@
+<head>
+    <title>FE to BE Connection</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js"></script>
+    <script>
+        getUserData();
+        async function signup(){
+            const username = document.getElementById("signup-username").value;
+            const password = document.getElementById("signup-password").value;
+            //!Debugged no await
+            await axios.post("http://localhost:3000/signup",{
+                username: username,
+                password: password
+            });
+            alert("You are Signed Up");
+        }
+        async function signin(){
+            const username = document.getElementById("signin-username").value;
+            const password = document.getElementById("signin-password").value;
+            const response = await axios.post("http://localhost:3000/signin",{
+                username: username,
+                password: password
+            });
+            console.log(response.data);
+            //! setItem not set
+            localStorage.setItem("token", response.data.token);
+            document.getElementById("addInfo").innerHTML = "Username: " + response?.data.username 
+            + " Password: " + response?.data.password;
+            alert("You are Signed In");
+        }
+
+        async function getUserData(){
+            const token = localStorage.getItem("token");
+            await axios("http://localhost:3000/me",{
+                headers:{
+                    token: token
+                }
+            })
+        }
+    
+        // async function logout(){
+        //     localStorage.removeItem("token");
+        //     for(let i = 0; i < users.size(); i++){
+        //         if()
+        //     }
+        // }
+    </script>
+</head>
+<body>
+    <div>
+        <span>Signup</span>
+        <input id="signup-username" type="text" placeholder="Username">
+        <input id="signup-password" type="password" placeholder="Password">
+        <button onclick="signup()">Submit</button>
+    </div>
+    <div>
+        <span>Signin</span>
+        <input id="signin-username" type="text" placeholder="Username">
+        <input id="signin-password" type="password" placeholder="Password">
+        <button onclick="signin()">Submit</button>
+    </div>
+    <div>
+        <span>User information: </span>
+        <div id="addInfo"></div>
+    </div>
+    <div>
+        <button onclick="logout()">Logout</button>
+    </div>
+</body>
