@@ -2,14 +2,14 @@
 
 > #### **_[100xDevs Cohort 3.0](https://app.100xdevs.com/) 🚀 by [Harkirat Singh](https://x.com/kirat_tw). This repository contains `live class/lecture codes, lecture assignments, assignment solutions, links to notes/slides link, some good relevant articles/blogs link` for each lecture, and a list of all topics covered in the class, organized lecture-wise to help you._**
 
-<!-- ## [`100xDevs (Harkirat) Cohort 3.0 Web3` GitHub Repository Link](https://github.com/Bharat2044/100xDevs-Cohort3-Web3) -->
+<!-- ## [`100xDevs (Harkirat) Cohort 3.0 Web3` GitHub Repository Link](https://github.com/Devakinandan23/100xDevs-Cohort3-Web3) -->
 
 ## 🔥 **Clone this Repository** 💫
 
 Write the following commands on your terminal to clone this repository, so that you can run this project locally.
 
 ```bash
-git clone https://github.com/Bharat2044/100xDevs-Cohort3-WebDev-and-Devops.git
+git clone https://github.com/Devakinandan23/100xDevs-Cohort3-WebDev-and-Devops.git
 ```
 
 ## 🔗 [**Class/Lecture Slides Link**](./Lecture%20Slides.md)
